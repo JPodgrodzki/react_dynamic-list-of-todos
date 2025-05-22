@@ -58,13 +58,13 @@ export const App: React.FC = () => {
         </div>
       </div>
 
-      {
+      {openModalId !== null && selectedTodo && (
         <TodoModal
           openModalId={openModalId}
           todo={selectedTodo}
           handleCloseModal={handleCloseModal}
         />
-      }
+      )}
     </>
   );
 };

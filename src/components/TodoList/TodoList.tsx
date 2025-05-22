@@ -41,7 +41,8 @@ export const TodoList: React.FC<Props> = ({
     getTodos()
       .then(setTodos)
       .finally(() => setIsLoading(false));
-  }, [setTodos, setIsLoading]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <table className="table is-narrow is-fullwidth">
